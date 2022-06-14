@@ -1,14 +1,32 @@
 <template>
   <div id="app">
-    <nav>
+    <!-- <nav>
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    </nav> -->
+    <HeaderComponent />
+    <ContentComponent />
   </div>
 </template>
 
+<script>
+import HeaderComponent from "./templates/HeaderComponent.vue";
+import ContentComponent from "./templates/ContentComponent.vue";
+
+export default {
+  components: {
+    HeaderComponent,
+    ContentComponent,
+  },
+};
+</script>
+
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
